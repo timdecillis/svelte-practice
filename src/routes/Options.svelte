@@ -1,6 +1,5 @@
 <script lang="ts">
   import { data } from "./dummydata";
-  export let flavor;
   export let updateFlavor: (chosen: string) => void;
 
   const handleFlavorClick = (chosen: string) => {
