@@ -4,7 +4,7 @@
   import Flavor from "./Flavor.svelte";
 
   let clicked = false;
-  let selected: string | null = 'none';
+  export let selected: string = 'none';
 
   const handleClick = () => {
     clicked = !clicked;
@@ -25,5 +25,5 @@
 
 <Options flavor={selected} updateFlavor={updateFlavor} />
 
-<!-- <Flavor flavor={selected} /> -->
-<div>{selected}</div>
+<Flavor flavor={selected} />
+
