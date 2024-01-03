@@ -1,6 +1,9 @@
 <script>
-  let clicked = false;
   import Button from "./Button.svelte";
+  import Options from "./Options.svelte";
+
+  let clicked = false;
+
   const handleClick = () => {
     clicked = !clicked;
   }
@@ -12,4 +15,6 @@
 {/if}
 
 <Button on:click={handleClick} />
+
+<Options></Options>
 
