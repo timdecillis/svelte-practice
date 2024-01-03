@@ -8,7 +8,7 @@
 <h1>Welcome to Svelte</h1>
 
 {#if clicked}
-  <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+  <div></div>
 {/if}
 
 <Button on:click={handleClick} />
