@@ -1,0 +1,1 @@
+<button on:click >Push me</button>
