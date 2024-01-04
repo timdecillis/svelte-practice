@@ -9,8 +9,6 @@
   }
 </script>
 
-<h1>Welcome to Svelte</h1>
-
 <Options updateFlavor={updateFlavor} />
 
 <Flavor flavor={selected} />
