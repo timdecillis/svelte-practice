@@ -1,6 +1,5 @@
 <script lang="ts" >
   import Options from "./Options.svelte";
-  import Flavor from "./Flavor.svelte";
 
   let selected: string = 'none';
 
