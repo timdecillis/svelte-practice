@@ -5,6 +5,8 @@
 
   let selected: string = 'none';
 
+  console.log('selected')
+
   const updateFlavor = (chosen: string) => {
     selected = chosen;
   }
