@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { data } from "./dummydata";
   export let updateFlavor: (chosen: string) => void;
 
@@ -12,30 +13,11 @@
       loading = false;
     }, 1500)
   };
-  let questions = [
-		{
-			id: 1,
-			text: `Where did you go to school?`
-		},
-		{
-			id: 2,
-			text: `What is your mother's name?`
-		},
-		{
-			id: 3,
-			text: `What is another personal fact that an attacker could easily find with Google?`
-		}
-	];
 
-	let selected;
+  onMount(() => {
+    setTimeout(() => console.log('foobar'), 6000);
+  })
 
-	let answer = '';
-
-	function handleSubmit() {
-		alert(
-			`answered question ${selected.id} (${selected.text}) with "${answer}"`
-		);
-	}
 </script>
 
 {#each data as flavor}
