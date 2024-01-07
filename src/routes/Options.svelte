@@ -46,22 +46,3 @@
 
   >{flavor} </button>
 {/each}
-
-<form on:submit|preventDefault={handleSubmit}>
-	<select
-		bind:value={selected}
-		on:change={() => (answer = '')}
-	>
-		{#each questions as question}
-			<option value={question}>
-				{question.text}
-			</option>
-		{/each}
-	</select>
-
-	<input bind:value={answer} />
-
-	<button disabled={!answer} type="submit">
-		Submit
-	</button>
-</form>
