@@ -13,6 +13,6 @@
   <button
   on:click={disable}
   disabled={disabled}
-  >
+  >{flavor}
 </button>
 {/each}
