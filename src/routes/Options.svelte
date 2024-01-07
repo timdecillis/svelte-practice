@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onMount, beforeUpdate, afterUpdate } from "svelte";
+
   import { data } from "./dummydata";
   export let updateFlavor: (chosen: string) => void;
 
@@ -14,9 +15,8 @@
     }, 1500)
   };
 
-  onMount(() => {
-    setTimeout(() => console.log('foobar'), 6000);
-  })
+  beforeUpdate(() => console.log('about to'))
+  afterUpdate(() => console.log('born to do'))
 
 </script>
 
