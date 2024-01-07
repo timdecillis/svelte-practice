@@ -15,5 +15,10 @@
 </script>
 
 {#each data as flavor}
-  <button on:click={disable} disabled={loading}>{flavor} </button>
+  <button
+  on:click={disable}
+  on:click={() => handleFlavorClick(flavor)}
+  disabled={loading}
+
+  >{flavor} </button>
 {/each}
