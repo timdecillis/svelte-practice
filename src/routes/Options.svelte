@@ -5,14 +5,15 @@
   const handleFlavorClick = (chosen: string) => {
     updateFlavor(chosen);
   };
-  let disabled = false;
-  const disable = () => disabled = true
+  let loading = false;
+  const disable = () => {
+    loading = true;
+    setTimeout(() => {
+      loading = false;
+    }, 1500)
+  };
 </script>
 
 {#each data as flavor}
-  <button
-  on:click={disable}
-  disabled={disabled}
-  >{flavor}
-</button>
+  <button on:click={disable} disabled={loading}>{flavor} </button>
 {/each}
