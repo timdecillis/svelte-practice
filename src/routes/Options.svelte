@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount, beforeUpdate, afterUpdate } from "svelte";
 
   import { data } from "./dummydata";
   export let updateFlavor: (chosen: string) => void;
@@ -14,9 +13,6 @@
       loading = false;
     }, 1500)
   };
-
-  beforeUpdate(() => console.log('about to'))
-  afterUpdate(() => console.log('born to do'))
 
 </script>
 
