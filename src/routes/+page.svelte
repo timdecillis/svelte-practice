@@ -1,6 +1,9 @@
 <script lang="ts" >
+  import { count } from './store'
   import Options from "./Options.svelte";
   import Flavor from "./Flavor.svelte";
+
+  console.log('count:', count)
 
   let selected: string = 'none';
 
