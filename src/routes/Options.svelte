@@ -5,8 +5,14 @@
   const handleFlavorClick = (chosen: string) => {
     updateFlavor(chosen);
   };
+  let disabled = false;
+  const disable = () => disabled = true
 </script>
 
 {#each data as flavor}
-  <button on:click={() => handleFlavorClick(flavor)}>{flavor}</button>
+  <button
+  on:click={disable}
+  disabled={disabled}
+  >
+</button>
 {/each}
