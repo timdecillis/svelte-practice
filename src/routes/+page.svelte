@@ -38,3 +38,5 @@
   <input id="username" type="text"/>
   <input type="submit" value="Save"/>
 </form>
+
+<progress value=1 />
