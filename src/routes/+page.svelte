@@ -6,8 +6,8 @@
 
   console.log("count:", count);
 
-  let clicks;
-  let currentUser;
+  let clicks: number;
+  let currentUser: string;
 
   let selected: string = "none";
 
@@ -16,16 +16,16 @@
   };
   const handleClick = () => {
     count.update((value) => {
-      return {...value, count: value.count + 1}
+      return { ...value, count: value.count + 1 };
     });
   };
 
-  count.subscribe(({count, user}) => {
-    clicks = count
+  const unsubscribe = count.subscribe(({ count, user }) => {
+    clicks = count;
     currentUser = user;
   });
 
-  // onDestroy(unsubscribe)
+  onDestroy(unsubscribe);
 </script>
 
 <button on:click={handleClick}>{currentUser}'s of clicks: {clicks} </button>
