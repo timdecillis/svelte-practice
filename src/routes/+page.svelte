@@ -6,6 +6,7 @@
 
   let clicks: number;
   let currentUser: string;
+  $: (currentUser)
 
   let selected: string = "none";
 
@@ -13,8 +14,8 @@
     selected = chosen;
   };
   const handleClick = () => {
-    count.update((value) => {
-      return { ...value, count: value.count + 1 };
+    count.update((store) => {
+      return { ...store, count: store.count + 1 };
     });
   };
 

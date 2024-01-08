@@ -1,7 +1,12 @@
 import { count } from "./store";
 
 export const actions = {
-  default: ({request}) => {
-    console.log('submitting form')
+  default: async ({request}) => {
+    const formData = await request.formData();
+    const user = formData.get('username') as string;
+
+    count.update((store) => {
+      return {...store, user}
+    })
   }
 };
