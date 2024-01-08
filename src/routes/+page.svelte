@@ -4,8 +4,6 @@
   import Flavor from "./Flavor.svelte";
   import { onDestroy } from "svelte";
 
-  console.log("count:", count);
-
   let clicks: number;
   let currentUser: string;
 
