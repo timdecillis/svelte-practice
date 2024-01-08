@@ -2,11 +2,14 @@
   import { count } from "./store";
   import Options from "./Options.svelte";
   import Flavor from "./Flavor.svelte";
-  import { onDestroy } from "svelte";
+  import { onDestroy, setContext } from "svelte";
 
   let clicks: number;
   let currentUser: string;
   $: (currentUser)
+  setContext('flavor', {
+    flavor: 'chocolate'
+  })
 
   let selected: string = "none";
 

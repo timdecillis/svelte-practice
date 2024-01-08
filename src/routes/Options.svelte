@@ -15,9 +15,7 @@
     }, 1500)
   };
 
-  setContext('flavor', {
-    flavor: 'chocolate'
-  })
+
 
 </script>
 
