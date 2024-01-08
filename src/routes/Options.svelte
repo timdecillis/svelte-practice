@@ -15,6 +15,10 @@
     }, 1500)
   };
 
+  setContext('flavor', {
+    flavor: 'chocolate'
+  })
+
 </script>
 
 {#each data as flavor}
