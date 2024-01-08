@@ -39,4 +39,4 @@
   <input type="submit" value="Save"/>
 </form>
 
-<progress value=1 />
+<progress color="black" style="background-color: green" value=1 />
