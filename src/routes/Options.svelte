@@ -1,6 +1,7 @@
 <script lang="ts">
 
   import { data } from "./dummydata";
+  import { setContext } from "svelte";
   export let updateFlavor: (chosen: string) => void;
 
   const handleFlavorClick = (chosen: string) => {
