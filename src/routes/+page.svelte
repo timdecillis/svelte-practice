@@ -31,3 +31,9 @@
 <Options {updateFlavor} />
 
 <Flavor flavor={selected} />
+
+<form method="post" on:submit|preventDefault>
+  <label for="username">change username</label>
+  <input id="username" type="text"/>
+  <input type="submit" value="Save"/>
+</form>
