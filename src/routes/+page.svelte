@@ -11,7 +11,7 @@
   let chosenColor: string;
   $: chosenColor;
 
-  let selected: string = "none";
+  let selected: string = "Cookies and Cream";
 
   const updateFlavor = (chosen: string) => {
     selected = chosen;
