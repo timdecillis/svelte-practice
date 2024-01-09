@@ -4,6 +4,7 @@
   import { onDestroy } from "svelte";
 
   let currentUser: string;
+  let newUser: string;
 
   let currentFlavor: string;
 
@@ -17,7 +18,7 @@
   const handleUserChange = () => {
 
     count.update((store) => {
-      return {...store, user: currentUser}
+      return {...store, user: newUser}
     })
   };
 
@@ -27,7 +28,7 @@
 
 <form method="post" action="user" on:submit|preventDefault={handleUserChange}>
   <label for="username">change username</label>
-  <input id="username" name="username" type="text" bind:value={currentUser}/>
+  <input id="username" name="username" type="text" bind:value={newUser}/>
   <input type="submit" value="Save"/>
 </form>
 
