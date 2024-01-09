@@ -15,25 +15,18 @@
 
   onDestroy(unsubscribe);
 
-  const handleUserChange = () => {
-
-    count.update((store) => {
-      return {...store, user: newUser}
-    })
-  };
-
 </script>
 
 <Flavor flavor={currentFlavor} user={currentUser} />
 
-<form method="post" action="user" on:submit|preventDefault={handleUserChange}>
-  <label for="username">change username</label>
-  <input id="username" name="username" type="text" bind:value={newUser}/>
+<form method="post" action="user" on:submit|preventDefault>
+  <label for="newUser">change username</label>
+  <input id="newUser" name="newUser" type="text"/>
   <input type="submit" value="Save"/>
 </form>
 
 <form method="post" action="flavor" on:submit|preventDefault>
-  <label for="username">update flavor</label>
+  <label for="flavor">update flavor</label>
   <input id="flavor" type="text"/>
   <input type="submit" value="Save"/>
 </form>
