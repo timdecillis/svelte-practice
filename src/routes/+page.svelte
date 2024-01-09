@@ -4,7 +4,8 @@
   import { onDestroy } from "svelte";
 
   let currentUser: string;
-  let newUser: string;
+
+  let newUser: string = '';
 
   let currentFlavor: string;
 
@@ -21,12 +22,12 @@
 
 <form method="post" action="user" on:submit|preventDefault>
   <label for="newUser">change username</label>
-  <input id="newUser" name="newUser" type="text"/>
+  <input id="newUser" name="newUser" type="text" value={newUser}/>
   <input type="submit" value="Save"/>
 </form>
 
 <form method="post" action="flavor" on:submit|preventDefault>
   <label for="flavor">update flavor</label>
-  <input id="flavor" type="text"/>
+  <input id="flavor" name="flavor" type="text"/>
   <input type="submit" value="Save"/>
 </form>
