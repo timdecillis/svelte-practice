@@ -8,19 +8,26 @@
   let currentFlavor: string;
 
   const unsubscribe = count.subscribe(({ user, flavor }) => {
-    console.log('flavor:', flavor)
     currentUser = user;
     currentFlavor = flavor;
   });
 
   onDestroy(unsubscribe);
+
+  const handleUserChange = (e: Event) => {
+    let user = e.target.value;
+    count.update((store) => {
+      return {...store, user}
+    })
+  };
+  let newInput: string;
 </script>
 
 <Flavor flavor={currentFlavor} user={currentUser} />
 
-<form method="post" action="user" on:submit|preventDefault>
+<form method="post" action="user" on:submit|preventDefault={handleUserChange}>
   <label for="username">change username</label>
-  <input id="username" type="text"/>
+  <input id="username" name="username" type="text"/>
   <input type="submit" value="Save"/>
 </form>
 

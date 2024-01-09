@@ -3,4 +3,4 @@
   export let flavor: string;
 </script>
 
-<div>Hello, {user}, enjoy some {flavor}</div>
+<div>Hello, {user}, enjoy some {flavor}!</div>
