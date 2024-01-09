@@ -2,7 +2,7 @@ import { writable } from 'svelte/store';
 
 export const count = writable(
   {
-    count: 0,
+    flavor: 'none',
     user: 'tim'
   }
 );
