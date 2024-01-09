@@ -12,6 +12,7 @@
   })
 
   let chosenColor: string;
+  $: chosenColor;
 
   let selected: string = "none";
 
@@ -30,6 +31,8 @@
   });
 
   onDestroy(unsubscribe);
+
+  const updateColor = (e: Event) => chosenColor = e.target.value;
 </script>
 
 <button on:click={handleClick}>{currentUser}'s of clicks: {clicks} </button>
@@ -46,4 +49,5 @@
 
 <progress color="black" style="background-color: green" value=1 />
 
-<div style="background-color: {chosenColor}"></div>
+<input type="color" on:change|preventDefault={updateColor} />
+<div style="background-color: {chosenColor}">this is a div</div>
