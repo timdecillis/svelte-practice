@@ -4,21 +4,18 @@
   import { onDestroy } from "svelte";
 
   let currentUser: string;
-  $: (currentUser)
-
-  let chosenColor: string;
-  $: chosenColor;
 
   let flavor: string = "Cookies and Cream";
 
-  const unsubscribe = count.subscribe(({ user }) => {
+  const unsubscribe = count.subscribe(({ user, flavor }) => {
     currentUser = user;
+    flavor = flavor;
   });
 
   onDestroy(unsubscribe);
 </script>
 
-<Flavor flavor={flavor} />
+<Flavor user={currentUser} />
 
 <form method="post" on:submit|preventDefault>
   <label for="username">change username</label>
