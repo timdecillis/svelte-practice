@@ -11,6 +11,8 @@
     flavor: 'chocolate'
   })
 
+  let chosenColor: string;
+
   let selected: string = "none";
 
   const updateFlavor = (chosen: string) => {
@@ -43,3 +45,5 @@
 </form>
 
 <progress color="black" style="background-color: green" value=1 />
+
+<div style="background-color: {chosenColor}"></div>
