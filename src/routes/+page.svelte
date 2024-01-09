@@ -14,20 +14,20 @@
 
   onDestroy(unsubscribe);
 
-  const handleUserChange = (e: Event) => {
-    let user = e.target.value;
+  const handleUserChange = () => {
+
     count.update((store) => {
-      return {...store, user}
+      return {...store, user: currentUser}
     })
   };
-  let newInput: string;
+
 </script>
 
 <Flavor flavor={currentFlavor} user={currentUser} />
 
 <form method="post" action="user" on:submit|preventDefault={handleUserChange}>
   <label for="username">change username</label>
-  <input id="username" name="username" type="text"/>
+  <input id="username" name="username" type="text" bind:value={currentUser}/>
   <input type="submit" value="Save"/>
 </form>
 
